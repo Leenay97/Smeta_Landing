@@ -2,9 +2,13 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -14,6 +18,7 @@ a {
 
 /* header */
 .header {
+    position: relative;
     height: 60px;
     width: 100%;
     box-shadow: #00000011 0px 3px 8px 3px;
@@ -27,6 +32,7 @@ a {
     justify-content: flex-end;
     height: 60px;
     align-items: center;
+    padding-inline-start: 0;
 }
 
 .menu__item {
@@ -53,6 +59,56 @@ section {
     align-items: center;
 }
 
+/* Burger */
+.burger__button {
+    display: none;
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    border-radius: 2px;
+    overflow: hidden;
+    padding: 16px 0;
+    transition: ease-in-out 300ms;
+}
+
+.burger__button-icon {
+    height: 8px;
+    width: 44px;
+    background-color: #ffd484;
+    /* border-bottom: 1px solid #3e3e3e44; */
+    
+}
+.burger__button-icon::before {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 44px;
+    background-color: #ffd484;
+    /* border-bottom: 1px solid #3e3e3e44; */
+    transform: translateY(-16px);
+    
+    
+}
+.burger__button-icon::after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 44px;
+    background-color: #ffd484;
+    /* border-bottom: 1px solid #3e3e3e44; */
+    transform: translateY(8px);
+}
+
+.burger__button-active {
+    border-radius: 50%;
+    transform: rotate(130deg);
+    transition: ease-in-out 300ms;
+    background-color: #3e3e3e11;
+}
+
+
 /* Intro commit*/
 
 .intro {
@@ -69,6 +125,7 @@ section {
 }
 .intro__image {
     height: 80%;
+    
 }
 .intro__text {
     padding: 30px;
@@ -124,6 +181,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.about__title {
+    text-align: center;
 }
 
 .about__subtitle {
@@ -195,6 +255,8 @@ section {
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
+    padding: 0 20px;
 }
 .howto__wrapper {
     display: flex;
@@ -221,4 +283,49 @@ section {
 }
 .howto__container-subtitle {
     font-size: 14px;
+}
+
+/* Swiper */
+
+.preswiper {
+    display: none;
+}
+
+.swiper {
+    height: 250px;
+    width: 500px;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.swiper-button-next {
+    right: -50px !important;
+}
+
+.swiper-button-prev {
+    left: -50px !important;
+}
+
+
+
+
+/* Additional */
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block !important;
+}
+
+.body-block {
+    overflow-y: hidden;
+    height: 100%;
 }

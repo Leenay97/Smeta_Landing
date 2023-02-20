@@ -7,17 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Смета</title>
 </head>
 
 <body>
     <header class="header">
-        <nav class="header__menu menu"><ul class="menu__list">
-            <li class="menu__item"><a href="#intro">Домашняя</a></li>
-            <li class="menu__item"><a href="#about">О нас</a></li>
-            <li class="menu__item"><a href="#services">Услуги</a></li>
-            <li class="menu__item"><a href="#howto">Контакты</a></li>
-        </ul></nav>
+        <div class="burger__button">
+            <div class="burger__button-icon"></div>
+        </div>
+        <nav class="header__menu menu">
+            <ul class="menu__list">
+                <a href="#intro">
+                    <li class="menu__item">Домашняя</li>
+                </a>
+                <a href="#intro">
+                    <li class="menu__item"><a href="#about">О нас</li>
+                </a>
+                <a href="#intro">
+                    <li class="menu__item"><a href="#services">Услуги</li>
+                </a>
+                <a href="#intro">
+                    <li class="menu__item"><a href="#howto">Контакты</li>
+                </a>
+            </ul>
+        </nav>
     </header>
     <main class="main">
         <section class="intro section" id="intro">
@@ -63,6 +79,59 @@
             <div class="services__head-title">
                 Наши услуги
             </div>
+            <div class="preswiper">
+                <div class="swiper">
+                    <div class="swiper-wrapper restricted">
+                        <div class="services__container swiper-slide">
+                            <img class="services__image" src="img/toolbox.png">
+                            <div class="services__text-container">
+                                <h1 class="services__title">Составление любых видов смет
+                                </h1>
+                                На строительные, монтажные, ремонтные и пусконаладочные работы.
+                            </div>
+                        </div>
+                        <div class="services__container swiper-slide">
+                            <img class="services__image" src="img/approved.png">
+                            <div class="services__text-container">
+                                <h1 class="services__title">Акты КС-2, КС-3, КС-6 М-39</h1>
+                                Составление документации по факту выполненных работ.
+                            </div>
+                        </div>
+                        <div class="services__container swiper-slide">
+                            <img class="services__image" src="img/audit.png">
+                            <div class="services__text-container">
+                                <h1 class="services__title">Сметы для банка</h1>
+                                Для оформления ипотеки на строительство жилого дома.
+                            </div>
+                        </div>
+                        <div class="services__container swiper-slide">
+                            <img class="services__image" src="img/finance.png">
+                            <div class="services__text-container">
+                                <h1 class="services__title">Абонентское обслуживание</h1>
+                                Вы экономите на заработной плате штатного инженера-сметчика.
+                            </div>
+                        </div>
+                        <div class="services__container swiper-slide">
+                            <img class="services__image" src="img/contract.png">
+                            <div class="services__text-container">
+                                <h1 class="services__title">Определение начальной (максимальной) цены контракта</h1>
+
+                            </div>
+                        </div>
+                        <div class="services__container swiper-slide">
+                            <img class="services__image" src="img/typing.png">
+                            <div class="services__text-container">
+                                <h1 class="services__title">Перебивка сметы в сметную программу</h1>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
             <div class="services__wrapper restricted">
                 <div class="services__container">
                     <img class="services__image" src="img/toolbox.png">
@@ -83,7 +152,7 @@
                     <img class="services__image" src="img/audit.png">
                     <div class="services__text-container">
                         <h1 class="services__title">Сметы для банка</h1>
-                        Для оформления ипотеки на строительство  жилого дома.
+                        Для оформления ипотеки на строительство жилого дома.
                     </div>
                 </div>
                 <div class="services__container">
@@ -109,6 +178,7 @@
                 </div>
 
             </div>
+            </div>
         </section>
         <section class="howto section" id="howto">
             <div class="howto__head-title">
@@ -118,7 +188,8 @@
                 <div class="howto__container">
                     <img class="howto__container-icon" src="img/email-marketing.png">
                     <div class="howto__container-title">Отправьте нам на почту ваши исходные данные или позвоните</div>
-                    <div class="howto__container-subtitle">Проект, дефектная ведомось,  ведомость объемов работ и тд.</div>
+                    <div class="howto__container-subtitle">Проект, дефектная ведомось, ведомость объемов работ и тд.
+                    </div>
                 </div>
                 <div class="howto__container">
                     <img class="howto__container-icon" src="img/hour.png">
@@ -137,5 +208,6 @@
         </section>
     </main>
 </body>
+<script src="js/script.js"></script>
 
 </html>
