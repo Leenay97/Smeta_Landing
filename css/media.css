@@ -1,4 +1,4 @@
-@media screen and (max-width: 1350px) {
+@media only screen and (max-width: 1350px) {
 
     .intro__title {
         font-size: 28px;
@@ -29,7 +29,7 @@
     }
 }
 
-@media screen and (max-width: 950px) {
+@media only screen and (max-width: 950px) {
 
     .header {
         margin-bottom: 20px;
@@ -86,7 +86,7 @@
     }
 }
 
-@media screen and (max-width: 690px) {
+@media only screen and (max-width: 690px) {
     .swiper-button-next, .swiper-button-prev {
         display: none !important;
     }
