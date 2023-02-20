@@ -28,16 +28,33 @@ const swiper = new Swiper('.swiper', {
 let burgerButton = document.querySelector('.burger__button');
 let nav = document.querySelector('.header__menu');
 
-burgerButton.addEventListener('click', (e)=>{
+let menuItems = document.querySelectorAll('.menu__item');
+
+burgerButton.addEventListener('click', (e) => {
     burgerButton.classList.toggle('burger__button-active');
     nav.classList.toggle('active');
     document.querySelector('body').classList.toggle('body-block');
     document.querySelector('html').classList.toggle('body-block');
 })
 
-window.addEventListener('resize', (e)=> {
+window.addEventListener('resize', (e) => {
     burgerButton.classList.remove('burger__button-active');
     nav.classList.remove('active');
     document.querySelector('body').classList.remove('body-block');
     document.querySelector('html').classList.remove('body-block');
 });
+
+
+
+menuItems.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        burgerButton.classList.remove('burger__button-active');
+        nav.classList.remove('active');
+        document.querySelector('body').classList.remove('body-block');
+        document.querySelector('html').classList.remove('body-block');
+    })
+});
+
+
+
+

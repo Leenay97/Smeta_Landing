@@ -162,6 +162,10 @@ section {
     left: 650px; */
 }
 
+.intro__button:hover {
+    transform: translate(2px, 2px);
+}
+
 /* About */
 .about {
     background-color: #00000008;
@@ -328,6 +332,26 @@ section {
 .body-block {
     overflow-y: hidden;
     height: 100%;
+}
+
+.go-up {
+    position: fixed;
+    border: none;
+    box-shadow: #3e3e3e11 3px 3px 5px 3px;
+    border-radius: 50%;
+    background: url('../img/up-arrow.png'), #ffd484;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+}
+.go-up:hover {
+    bottom: 18px;
+    right: 18px;
+    box-shadow: #3e3e3e11 3px 3px 0px 0px;
 }
 
 /* Media */
