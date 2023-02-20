@@ -1,0 +1,27 @@
+@media screen and (max-width: 1350px) {
+
+    .intro__title {
+        font-size: 30px;
+    }
+    .intro__subtitle {
+        font-size: 10px;
+    }
+
+    .services {
+        height: auto;
+    }
+    .services__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+
+    .howto__wrapper {
+        flex-direction: column;
+    }
+    .howto__container {
+        max-width: 500px;
+    }
+}

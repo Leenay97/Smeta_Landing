@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* header */
+.header {
+    height: 60px;
+    width: 100%;
+    box-shadow: #00000011 0px 3px 8px 3px;
+    margin-bottom: 50px;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: flex-end;
+    height: 60px;
+    align-items: center;
+}
+
+.menu__item {
+    list-style: none;
+    height: 100%;
+    width: 160px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ffd484;
+    transition: linear 300ms;
+}
+.menu__item:hover {
+    border-bottom: 4px solid #ffd484;
+    transition: linear 100ms;
+}
+
+.restricted {
+    max-width: 80vw;
+    margin: auto;
+}
+section {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Intro */
+
+.intro {
+    position: relative;
+    
+    height: calc(100vh - 60px);
+    min-height: 500px;
+}
+.intro__text-container {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+.intro__image {
+    height: 80%;
+}
+.intro__text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro__title {
+    font-size: 45px;
+}
+.intro__title h1 {
+    margin: 0;
+}
+.intro__subtitle {
+    font-size: 15px;
+    color: #3e3e3e;
+}
+.intro__button {
+    margin-top: 30px;
+    height: 80px;
+    width: 250px;
+    align-self: flex-start;
+    background-color: #ffd484;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    /* position: absolute;
+    top: 450px;
+    left: 650px; */
+}
+
+/* About */
+.about {
+    background-color: #00000008;
+    padding: 30px 0;
+    
+}
+
+.about__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+}
+.about__container {
+    max-width: 250px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__subtitle {
+    text-align: center;
+}
+
+.about__icon {
+    align-self: center;
+    height: 120px;
+    width: 120px;
+}
+
+/* Services */
+
+.services {
+    height: 100vh;
+    min-height: 600px;
+    padding: 30px 0;
+}
+
+.services__head-title {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.services__wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+.services__container {
+    max-width: 400px;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.services__image {
+    min-width: 160px;
+    height: 160px;
+    
+}
+
+.services__text-container {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.services__title {
+    font-size: 20px;
+    padding: 0;
+    margin-top: 0;
+    text-align: left;
+}
+
+
+/* How to */
+.howto {
+    background-color: #00000008;
+}
+.howto__head-title h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.howto__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.howto__container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+.howto__container-icon {
+    height: 150px;
+    width: 150px;
+}
+
+.howto__container-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+.howto__container-subtitle {
+    font-size: 14px;
+}
