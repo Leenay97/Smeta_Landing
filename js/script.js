@@ -48,21 +48,25 @@ window.addEventListener('resize', (e) => {
     header.classList.remove('hide');
 });
 
+var prevScroll = window.scrollY || document.scrollTop;
+var curScroll;
+var direction = 0;
+var prevDirection = 0;
+
 menuItems.forEach((item) => {
     item.addEventListener('click', (e) => {
         burgerButton.classList.remove('burger__button-active');
         nav.classList.remove('active');
         document.querySelector('body').classList.remove('body-block');
         document.querySelector('html').classList.remove('body-block');
+        direction = 2;
+        if (window.innerWidth < 690) {
         header.classList.add('hide');
+        }
 
     })
 });
 
-var prevScroll = window.scrollY || document.scrollTop;
-var curScroll;
-var direction = 0;
-var prevDirection = 0;
 
 
 
@@ -116,7 +120,7 @@ window.addEventListener('scroll', () => {
 let upButton = document.querySelector('.go-up');
 upButton.addEventListener('click', () => {
     header.classList.remove('hide')
-    direction = 0;
+    direction = 1;
 }
 );
 

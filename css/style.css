@@ -98,13 +98,15 @@ a {
 
 .restricted {
     max-width: 80vw;
-    margin: auto;
+    margin: 0 auto;
 }
 
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
 }
 
 /* Burger */
@@ -202,12 +204,13 @@ section {
     font-size: 15px;
     color: #3e3e3e;
 }
-
+.intro a {
+    align-self: flex-start;
+}
 .intro__button {
     margin-top: 30px;
     height: 80px;
     width: 250px;
-    align-self: flex-start;
     background-color: #a2a4fb;
     border: 0;
     border-radius: 10px;
@@ -293,7 +296,7 @@ section {
 
 .services {
     height: 100vh;
-    min-height: 600px;
+    /* min-height: 600px; */
     padding-bottom: 30px;
 }
 
@@ -348,6 +351,7 @@ section {
 
 .howto__container {
     padding: 40px;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -621,6 +625,9 @@ section {
         display: block;
         position: relative;
     }
+    .intro a {
+        align-self: center;
+    }
     .about__info {
         background-image: none;
         align-items: center;
@@ -686,9 +693,6 @@ section {
         padding: 40px;
     }
 
-    .intro__button {
-        align-self: center;
-    }
 }
 
 @media screen and (max-width: 690px) {
@@ -697,11 +701,16 @@ section {
     }
     .head-title {
         font-size: 30px;
+
+        padding: 30px 0 20px 0;
     }
 
     .swiper-button-next,
     .swiper-button-prev {
         display: none !important;
+    }
+    .about__info-title {
+        font-size: 24px;
     }
 
     .services__container {
