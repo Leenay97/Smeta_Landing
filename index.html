@@ -205,13 +205,13 @@
         </section>
         <section class="contacts section" id="#contacts">
             <div class="contacts__wrapper">
-                <form class="contacts__form">
+                <form class="contacts__form" action="form.php" method="post">
                     <div class="form__title">Связаться с нами</div>
-                    <input class="contacts__form-textarea name-area" name="name" placeholder="Ваше имя"></textarea>
-                    <input class="contacts__form-textarea email-area" name="email" placeholder="e-mail"></textarea>
+                    <input class="contacts__form-textarea name-area" name="name" placeholder="Ваше имя" minlength="1" required></textarea>
+                    <input class="contacts__form-textarea email-area" name="email" placeholder="e-mail" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required></textarea>
                     <textarea class="contacts__form-textarea message-area" name="message" id="" cols="30" rows="10"
-                        placeholder="Оставьте Ваш вопрос"></textarea>
-                    <input type="submit" class="form__submit">
+                        placeholder="Оставьте Ваш вопрос" required></textarea>
+                    <button type="submit" class="form__submit">Отправить</button>
                 </form>
                 <div class="contacts__social">
                     <div class="contacts__social-title">Наши контакты</div>
