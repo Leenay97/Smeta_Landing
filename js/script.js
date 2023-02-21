@@ -25,6 +25,9 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+let body = document.querySelector('body');
+var header = document.querySelector('.header');
+
 let burgerButton = document.querySelector('.burger__button');
 let nav = document.querySelector('.header__menu');
 
@@ -42,9 +45,8 @@ window.addEventListener('resize', (e) => {
     nav.classList.remove('active');
     document.querySelector('body').classList.remove('body-block');
     document.querySelector('html').classList.remove('body-block');
+    header.classList.remove('hide');
 });
-
-
 
 menuItems.forEach((item) => {
     item.addEventListener('click', (e) => {
@@ -52,9 +54,70 @@ menuItems.forEach((item) => {
         nav.classList.remove('active');
         document.querySelector('body').classList.remove('body-block');
         document.querySelector('html').classList.remove('body-block');
+        header.classList.add('hide');
+
     })
 });
 
+var prevScroll = window.scrollY || document.scrollTop;
+var curScroll;
+var direction = 0;
+var prevDirection = 0;
 
+
+
+var checkScroll = function() {
+
+  /*
+  ** Find the direction of scroll
+  ** 0 - initial, 1 - up, 2 - down
+  */
+
+  curScroll = window.scrollY || document.scrollTop;
+  if (curScroll > prevScroll) { 
+    //scrolled up
+    direction = 2;
+    console.log('up');
+  }
+  else if (curScroll < prevScroll) { 
+    //scrolled down
+    direction = 1;
+    console.log('down')
+  }
+
+  if (direction !== prevDirection) {
+    toggleHeader(direction, curScroll);
+  }
+  
+  prevScroll = curScroll;
+};
+
+var toggleHeader = function(direction, curScroll) {
+  if (direction === 2 && curScroll > 22) { 
+    
+    //replace 52 with the height of your header in px
+
+    header.classList.add('hide');
+    prevDirection = direction;
+  }
+  else if (direction === 1) {
+    header.classList.remove('hide');
+    prevDirection = direction;
+  }
+};
+
+window.addEventListener('scroll', () => {
+    if (window.innerWidth <=690){
+        checkScroll();
+    }
+    
+} );
+
+let upButton = document.querySelector('.go-up');
+upButton.addEventListener('click', () => {
+    header.classList.remove('hide')
+    direction = 0;
+}
+    );
 
 
