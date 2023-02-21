@@ -20,9 +20,9 @@
         </div>
         <nav class="header__menu menu">
             <ul class="menu__list">
-                <a href="#intro">
+                <!-- <a href="#intro">
                     <li class="menu__item">Домашняя</li>
-                </a>
+                </a> -->
                 <a href="#about">
                     <li class="menu__item">О нас</li>
                 </a>
@@ -53,6 +53,7 @@
 
         </section>
         <section class="about section" id="about">
+            <div class="about__head-title head-title">Почему мы?</div>
             <div class="about__wrapper restricted">
                 <div class="about__container">
                     <img src="img/calendar.png" class="about__icon">
@@ -74,9 +75,30 @@
                         положительного заключения.</span>
                 </div>
             </div>
+            <div class="about__info">
+                <div class="restricted">
+                    <div class="about__info-title">
+                        Легко справимся с Вашей задачей
+                    </div>
+                    <ul class="about__info-list">
+                        <li class="about__info-string">Работаем с 2017г.</li>
+                        <li class="about__info-string">Опыт работы наших инженеров — сметчиков от 5 до 20 лет </li>
+                        <li class="about__info-string">Наши сметы пройдут любые проверки</li>
+                        <li class="about__info-string">Разработанная нами сметная документация получила положительное
+                            заключение государственной экспертизы на объекты стоимостью от 100 тыс. до 1,5 миллиарда
+                            рублей
+                        </li>
+                        <li class="about__info-string">Бесплатно вносим корректировки в наши сметы по замечаниям вашего
+                            заказчика/экспертизы</li>
+                        <li class="about__info-string">Работаем в ПК «ГРАНД-Смета» и у нас всегда свежие базы ФЕР, ГЭСН
+                            с последними дополнениями 2022 года и требова-ниями новой методики 421</li>
+                        <li class="about__info-string">Мы находимся в г. Иркутске, но работаем по всей России</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section class="services section" id="services">
-            <div class="services__head-title">
+            <div class="services__head-title head-title">
                 Наши услуги
             </div>
             <div class="preswiper">
@@ -93,7 +115,7 @@
                         <div class="services__container swiper-slide">
                             <img class="services__image" src="img/approved.png">
                             <div class="services__text-container">
-                                <h1 class="services__title">Акты КС-2, КС-3, КС-6 М-39</h1>
+                                <div class="services__title">Акты КС-2, КС-3, КС-6 М-39</div>
                                 Составление документации по факту выполненных работ.
                             </div>
                         </div>
@@ -181,8 +203,8 @@
             </div>
         </section>
         <section class="howto section" id="howto">
-            <div class="howto__head-title">
-                <h1>Как с нами связаться</h1>
+            <div class="howto__head-title head-title">
+                Как с нами связаться
             </div>
             <div class="howto__wrapper restricted">
                 <div class="howto__container">
@@ -207,8 +229,10 @@
             <div class="contacts__wrapper">
                 <form class="contacts__form" action="form.php" method="post">
                     <div class="form__title">Связаться с нами</div>
-                    <input class="contacts__form-textarea name-area" name="name" placeholder="Ваше имя" minlength="1" required></textarea>
-                    <input class="contacts__form-textarea email-area" name="email" placeholder="e-mail" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required></textarea>
+                    <input class="contacts__form-textarea name-area" name="name" placeholder="Ваше имя" minlength="1"
+                        required></textarea>
+                    <input class="contacts__form-textarea email-area" name="email" placeholder="e-mail"
+                        pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required></textarea>
                     <textarea class="contacts__form-textarea message-area" name="message" id="" cols="30" rows="10"
                         placeholder="Оставьте Ваш вопрос" required></textarea>
                     <button type="submit" class="form__submit">Отправить</button>
@@ -216,7 +240,7 @@
                 <div class="contacts__social">
                     <div class="contacts__social-title">Наши контакты</div>
                     <div class="contacts__contacts">
-                        
+
                         <div class="contacts__phone phonemail">+9-999-999-99-99</div>
                         <div class="contacts__email phonemail">Sample@gmail.com</div>
                     </div>

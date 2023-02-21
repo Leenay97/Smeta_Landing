@@ -66,58 +66,70 @@ var prevDirection = 0;
 
 
 
-var checkScroll = function() {
+var checkScroll = function () {
 
-  /*
-  ** Find the direction of scroll
-  ** 0 - initial, 1 - up, 2 - down
-  */
+    /*
+    ** Find the direction of scroll
+    ** 0 - initial, 1 - up, 2 - down
+    */
 
-  curScroll = window.scrollY || document.scrollTop;
-  if (curScroll > prevScroll) { 
-    //scrolled up
-    direction = 2;
-    console.log('up');
-  }
-  else if (curScroll < prevScroll) { 
-    //scrolled down
-    direction = 1;
-    console.log('down')
-  }
+    curScroll = window.scrollY || document.scrollTop;
+    if (curScroll > prevScroll) {
+        //scrolled up
+        direction = 2;
+        console.log('up');
+    }
+    else if (curScroll < prevScroll) {
+        //scrolled down
+        direction = 1;
+        console.log('down')
+    }
 
-  if (direction !== prevDirection) {
-    toggleHeader(direction, curScroll);
-  }
-  
-  prevScroll = curScroll;
+    if (direction !== prevDirection) {
+        toggleHeader(direction, curScroll);
+    }
+
+    prevScroll = curScroll;
 };
 
-var toggleHeader = function(direction, curScroll) {
-  if (direction === 2 && curScroll > 22) { 
-    
-    //replace 52 with the height of your header in px
+var toggleHeader = function (direction, curScroll) {
+    if (direction === 2 && curScroll > 22) {
 
-    header.classList.add('hide');
-    prevDirection = direction;
-  }
-  else if (direction === 1) {
-    header.classList.remove('hide');
-    prevDirection = direction;
-  }
+        //replace 52 with the height of your header in px
+
+        header.classList.add('hide');
+        prevDirection = direction;
+    }
+    else if (direction === 1) {
+        header.classList.remove('hide');
+        prevDirection = direction;
+    }
 };
 
 window.addEventListener('scroll', () => {
-    if (window.innerWidth <=690){
+    if (window.innerWidth <= 690) {
         checkScroll();
     }
-    
-} );
+
+});
 
 let upButton = document.querySelector('.go-up');
 upButton.addEventListener('click', () => {
     header.classList.remove('hide')
     direction = 0;
 }
-    );
+);
 
+var form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+});
 
+var submitButton = document.querySelector('.form__submit');
+var textarea = document.querySelectorAll('.contacts__form-textarea');
+submitButton.addEventListener('click', (e) => {
+    textarea.forEach((item) => {
+        item.classList.add('submitted');
+    })
+})

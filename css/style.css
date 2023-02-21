@@ -44,6 +44,7 @@
      -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none;
+  color: #1d2f52;
 }
 
 html {
@@ -225,7 +226,6 @@ section {
 /* About */
 .about {
     background-color: #00000008;
-    padding: 30px 0;
 
 }
 
@@ -234,6 +234,37 @@ section {
     flex-direction: row;
     justify-content: space-between;
     gap: 80px;
+    padding-bottom: 40px;
+}
+.about__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    background-image: url('../img/service.png');
+    background-repeat: no-repeat;
+    background-position: top 180px right 20px;
+    background-size: 350px;
+    padding-bottom: 40px;
+    min-height: 500px;
+    background-color: #a2a4fb33;
+}
+
+.about__info-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+    align-self: center;
+}
+.about__info-list {
+    width: 600px;
+}
+.about__info-string {
+    line-height: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .about__container {
@@ -263,15 +294,9 @@ section {
 .services {
     height: 100vh;
     min-height: 600px;
-    padding: 30px 0;
+    padding-bottom: 30px;
 }
 
-.services__head-title {
-    width: 100%;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 600;
-}
 
 .services__wrapper {
 
@@ -314,13 +339,6 @@ section {
     background-color: #00000008;
 }
 
-.howto__head-title h1 {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 0 20px;
-}
 
 .howto__wrapper {
     display: flex;
@@ -394,6 +412,16 @@ section {
     outline: none;
     border: 1px solid #a2a4fbaa;
     transition: all 500ms ease-in-out;
+}
+.contacts__form-textarea:valid {
+    background-image: url(../img/checkbox.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center right 15px;
+}
+.contacts__form-textarea.submitted:invalid {
+    border: 0;
+    border-bottom: 2px solid red;
 }
 
 .message-area {
@@ -470,6 +498,9 @@ section {
 .footer__references:hover {
     text-decoration: underline;
 }
+.footer__references {
+    color: #ffffff44;
+}
 /* Swiper */
 
 .preswiper {
@@ -500,6 +531,13 @@ section {
 
 
 /* Additional */
+
+.head-title {
+    padding: 40px 0;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
 
 .inactive {
     display: none;
@@ -583,6 +621,19 @@ section {
         display: block;
         position: relative;
     }
+    .about__info {
+        background-image: none;
+        align-items: center;
+        padding: 20px 20px 0 20px;
+    }
+    .about__info-title {
+        padding: 20px 0;
+    }
+    .about__info-list {
+        width: auto;
+        max-width: 500px;
+        padding-right: 20px;
+    }
 
     .services {
         min-height: auto;
@@ -602,6 +653,7 @@ section {
 
     .services__head-title {
         margin-bottom: 0;
+        padding-bottom: 0;
         font-size: 42px;
     }
 
@@ -642,6 +694,9 @@ section {
 @media screen and (max-width: 690px) {
     main {
         padding-top: 40px;
+    }
+    .head-title {
+        font-size: 30px;
     }
 
     .swiper-button-next,
@@ -726,6 +781,9 @@ section {
     }
     .contacts__form-textarea {
         width: 60vw;
+    }
+    .contacts__form {
+        margin-top: -1px;
     }
     .phonemail {
         font-size: 18px;
