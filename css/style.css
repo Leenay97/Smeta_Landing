@@ -476,6 +476,9 @@ section {
     height: 30px;
     font-size: 20px;
 }
+.phonemail a {
+    color: white;
+}
 .contacts__phone {
     background-image: url('../img/phone-call.png');
 
