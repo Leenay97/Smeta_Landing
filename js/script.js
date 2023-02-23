@@ -36,14 +36,12 @@ let menuItems = document.querySelectorAll('.menu__item');
 burgerButton.addEventListener('click', (e) => {
     burgerButton.classList.toggle('burger__button-active');
     nav.classList.toggle('active');
-    document.querySelector('body').classList.toggle('body-block');
     document.querySelector('html').classList.toggle('body-block');
 })
 
 window.addEventListener('resize', (e) => {
     burgerButton.classList.remove('burger__button-active');
     nav.classList.remove('active');
-    document.querySelector('body').classList.remove('body-block');
     document.querySelector('html').classList.remove('body-block');
     header.classList.remove('hide');
 });
@@ -57,7 +55,6 @@ menuItems.forEach((item) => {
     item.addEventListener('click', (e) => {
         burgerButton.classList.remove('burger__button-active');
         nav.classList.remove('active');
-        document.querySelector('body').classList.remove('body-block');
         document.querySelector('html').classList.remove('body-block');
         direction = 2;
         if (window.innerWidth < 690) {
@@ -97,7 +94,7 @@ var checkScroll = function () {
 };
 
 var toggleHeader = function (direction, curScroll) {
-    if (direction === 2 && curScroll > 22) {
+    if (direction === 2) {
 
         //replace 52 with the height of your header in px
 
@@ -135,5 +132,27 @@ var textarea = document.querySelectorAll('.contacts__form-textarea');
 submitButton.addEventListener('click', (e) => {
     textarea.forEach((item) => {
         item.classList.add('submitted');
+    })
+})
+
+let footerRef = document.querySelector('.footer__references');
+footerRef.addEventListener('click', ()=>{
+    elementWrap = document.createElement('div')
+    elementWrap.classList.add('references__wrapper');
+    newElement = document.createElement('div');
+    newElement.classList.add('references');
+    newElement.innerHTML = '<a href="https://www.flaticon.com/free-stickers/calendar" title="calendar stickers">Calendar stickers created by Ghozi Muhtarom - Flaticon</a><a href="https://www.flaticon.com/free-stickers/toolkit" title="toolkit stickers">Toolkit stickers created by kerismaker - Flaticon</a><a href="https://www.flaticon.com/free-stickers/audit" title="audit stickers">Audit stickers created by bukeicon - Flaticon</a><a href="https://www.flaticon.com/free-stickers/money" title="money stickers">Money stickers created by Stickers - Flaticon</a><a href="https://www.flaticon.com/free-stickers/contract" title="contract stickers">Contract stickers created by inipagistudio - Flaticon</a><a href="https://www.flaticon.com/free-stickers/typing" title="typing stickers">Typing stickers created by inipagistudio - Flaticon</a><a href="https://www.flaticon.com/free-stickers/email-marketing" title="email marketing stickers">Email marketing stickers created by inipagistudio - Flaticon</a><a href="https://www.flaticon.com/free-stickers/clock" title="clock stickers">Clock stickers created by Stickers - Flaticon</a><a href="https://www.flaticon.com/free-stickers/people" title="people stickers">People stickers created by Stickers - Flaticon</a><a href="https://www.flaticon.com/free-icons/up-arrow" title="up arrow icons">Up arrow icons created by Roundicons Premium - Flaticon</a><a href="https://www.flaticon.com/free-stickers/customer-service" title="customer service stickers">Customer service stickers created by kerismaker - Flaticon</a><a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Rendyudha - Flaticon</a>';
+    closeButton = document.createElement('div');
+    closeButton.classList.add('references__close');
+    newElement.appendChild(closeButton);
+    body.append(elementWrap);
+    elementWrap.appendChild(newElement);
+    document.querySelector('html').classList.add('body-block');
+
+    elementWrap.addEventListener('click', (e)=> {
+        if (e.target !== newElement){
+        elementWrap.remove();
+        document.querySelector('html').classList.remove('body-block');
+    }
     })
 })
